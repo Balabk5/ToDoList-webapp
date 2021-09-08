@@ -1,0 +1,17 @@
+
+{% extends "main/base.html" %}
+
+{% block title %} create new list {% endblock %} 
+
+{% block content %}
+<h3>Add your task here</h3>
+<form method="post" action="/create/" class="form-group" > 
+{% csrf_token %}
+<div class="input-group mb-3">
+	<div class="input-group-prepend">
+		<button type="sumbit", name="save" class="btn btn-success"> click me </button>
+	</div>
+	{{form.name}}
+</div>
+</form>
+{% endblock %}

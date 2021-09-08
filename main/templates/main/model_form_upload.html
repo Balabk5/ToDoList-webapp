@@ -1,0 +1,7 @@
+{% extends "main/base.html" %} {% block content %}
+<form method="post" enctype="multipart/form-data" class="form-group">
+  {% csrf_token %} {{form.as_P}}
+  <button type="submit" class="btn btn-success">upload</button>
+</form>
+<p><a href="{% url 'home' %}"> Return to home 🏠</a></p>
+ {% endblock %}
